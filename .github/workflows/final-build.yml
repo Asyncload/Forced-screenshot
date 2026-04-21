@@ -1,4 +1,4 @@
-name: Build APK (One-Click)
+name: Build APK (Final Working)
 
 on:
   workflow_dispatch: {}
@@ -16,12 +16,15 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      # 👇 关键一步：直接在 Actions 里生成 gradlew 和配置，不用你手动建
-      - name: Create Gradle Wrapper
+      # 👇 一次性创建所有 gradle wrapper 文件，包括 jar 包
+      - name: Full Gradle Wrapper Setup
         run: |
           # 创建目录
           mkdir -p gradle/wrapper
-          
+
+          # 下载 gradle-wrapper.jar（官方原版）
+          wget -O gradle/wrapper/gradle-wrapper.jar https://github.com/gradle/gradle/raw/v7.5.0/gradle/wrapper/gradle-wrapper.jar
+
           # 写入 gradle-wrapper.properties
           cat > gradle/wrapper/gradle-wrapper.properties << 'EOF'
           distributionBase=GRADLE_USER_HOME
