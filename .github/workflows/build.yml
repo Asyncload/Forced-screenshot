@@ -6,8 +6,9 @@ name: Build APK
 # 2. 手动点击Run workflow时
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:  # 允许手动运行
+  
+  workflow_dispatch: {}
+   # 允许手动运行
 
 jobs:
   build:
