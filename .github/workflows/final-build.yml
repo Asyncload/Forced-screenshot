@@ -18,7 +18,7 @@ jobs:
       - name: Install Gradle (Fixed Version)
         run: |
           sudo apt update
-          sudo apt install -y gradle=7.5.*
+          sudo apt install -y gradle
           gradle --version
 
       - name: Global Repo Fix
