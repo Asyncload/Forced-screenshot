@@ -1,36 +1,36 @@
+import com.android.build.api.dsl.CommonExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
     namespace = "com.lbxq.screen"
-    compileSdk = 35
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.lbxq.screen"
         minSdk = 29
-        targetSdk = 35
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
+    }
+
+    buildFeatures {
+        compose = false
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    buildFeatures {
-        buildConfig = false
-    }
-
-    lint {
-        abortOnError = false
-        ignoreWarnings = true
-        checkReleaseBuilds = false
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
-
 dependencies {
-    compileOnly("de.robv.android.xposed:api:82")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.21")
 }
