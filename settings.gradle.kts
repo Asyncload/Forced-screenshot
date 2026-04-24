@@ -5,16 +5,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // 关闭强制仓库限制，彻底解决冲突报错
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
-        // 把Xposed仓库加在这里，全局生效
-        maven { url = uri("https://api.xposed.info/") }
+        maven("https://api.xposed.info")
     }
 }
-
 rootProject.name = "ScreenModule"
 include(":app")
