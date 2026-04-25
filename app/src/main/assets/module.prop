@@ -1,0 +1,9 @@
+id=com.lbxq.screen
+name=ScreenModule
+version=1.0.0
+versionCode=1
+author=YourName
+description=屏幕相关功能模块
+minApi=29
+maxApi=34
+lsposedApi=23
