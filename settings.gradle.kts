@@ -9,6 +9,7 @@ pluginManagement {
         gradlePluginPortal()
         // 4. 额外补充：JitPack（防止部分依赖缺失）
         maven("https://jitpack.io")
+        maven("https://api.xposed.info/") // 添加LSPosed仓库
     }
 }
 
