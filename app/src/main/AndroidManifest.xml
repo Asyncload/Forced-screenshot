@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lbxq.screen">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.lbxq.screen">
 
     <application
-        android:label="X-JT" 
+        android:name=".X-JT"
+        android:label="@string/app_name"
         android:allowBackup="true"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        tools:ignore="DataExtractionRules">
         <meta-data
             android:name="xposedmodule"
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="1.解除某些APP屏蔽截图功能。" />
+            android:value="解除某些APP屏蔽截图功能。" />
         <meta-data
             android:name="xposedminversion"
             android:value="82" />
