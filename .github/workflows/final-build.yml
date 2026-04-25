@@ -107,7 +107,7 @@ jobs:
           mv app/build/outputs/apk/release/app-release-signed.apk app/build/outputs/apk/release/$NEW_NAME
           echo "APK_FILE=app/build/outputs/apk/release/$NEW_NAME" >> $GITHUB_ENV
 
-          git add app/build.gradle
+          git add app/build.gradle.kts
           if ! git diff --cached --quiet; then
             git commit -m "chore: 自动迭代版本至 ${VERSION} [skip ci]"
             git push
