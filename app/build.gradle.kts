@@ -1,7 +1,7 @@
 //Android项目中 app 模块的构建配置文件
 plugins {
     id("com.android.application") version "8.1.0" // 8.1版本插件
-    id("org.jetbrains.kotlin.android") version "1.9.22" // 适配8.1插件的Kotlin版本
+    //id("org.jetbrains.kotlin.android") version "1.9.22" // 适配8.1插件的Kotlin版本
 }
 
 android {
