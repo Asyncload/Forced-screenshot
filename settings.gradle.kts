@@ -19,8 +19,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven { url 'https://jitpack.io' }
-        maven { url 'https://api.xposed.info/' }
+        maven("https://jitpack.io")
+        maven("https://api.xposed.info")
     
     }
 }
